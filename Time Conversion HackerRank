@@ -1,0 +1,31 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    char a[11],i,h=0;
+    scanf("%s",a);
+    h=(a[0]-48)*10+(a[1]-48);
+    if(a[8]=='A'){
+        if(h==12)
+        printf("00:");
+        else if ((h>=1)&(h<=9))
+        printf("0%d:",h);
+        else 
+        printf("%d:",h);
+    }
+    else {
+        if(h==12)
+        printf("12:");
+        else {
+            h=h+12;
+            printf("%d:",h);
+        }
+    }
+        for(i=3;i<8;i++)
+        printf("%c",a[i]);
+}
